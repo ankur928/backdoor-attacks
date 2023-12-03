@@ -1,5 +1,15 @@
 # Neural Network Backdoor Detection Using Channel Pruning
 
+## Table of Contents
+
+Overview
+System Requirements
+Repository Structure
+Installation and Operation Guide
+Contributions
+License
+Acknowledgements
+
 ## Overview
 This repository hosts the code for a novel neural network backdoor detection system. The project's goal is to enhance security in neural networks, particularly BadNets trained on the YouTube Face dataset, by developing an advanced model named GoodNet. GoodNet is engineered to differentiate between normal and compromised (backdoored) inputs, classifying them into separate categories.
 
