@@ -1,5 +1,9 @@
 # Neural Network Backdoor Detection Using Channel Pruning
 
+## Details
+Name: Ankur Aggarwal  
+Net ID: aa10336
+
 ## Table of Contents
 1. [Overview](#overview)
 2. [System Requirements](#system-requirements)
