@@ -1,33 +1,33 @@
+# Neural Network Backdoor Detection Using Channel Pruning
 
-Project Title: Backdoor Detection in Neural Networks Using Pruning Defense
+## Overview
+This repository hosts the code for a novel neural network backdoor detection system. The project's goal is to enhance security in neural networks, particularly BadNets trained on the YouTube Face dataset, by developing an advanced model named GoodNet. GoodNet is engineered to differentiate between normal and compromised (backdoored) inputs, classifying them into separate categories.
 
-Description
-This repository contains the implementation of a backdoor detection system for neural networks, specifically targeting BadNets trained on the YouTube Face dataset. The project involves the development of a modified neural network, referred to as GoodNet, capable of classifying both clean and backdoored inputs by introducing an additional classification category.
+## System Requirements
 
-Environment
-- MacBook Pro with M1 chip
-- Jupyter Notebook
+Execution Environment: MacBook Pro equipped with M1 chip
+Interface: Jupyter Notebook
+## Repository Structure
 
-Contents
-- Pruning_Defense.ipynb: The main Jupyter Notebook containing the implementation of the pruning defense and GoodNet.
-- eval.py: A script for evaluating the model's performance on clean and backdoored data.
-- Data/: Directory containing the validation set (valid.h5) and test set (test.h5).
-- Models/: Directory where the original, pruned, and GoodNet models are saved.
+Notebook_PruneDefense.ipynb: Core Jupyter Notebook with pruning defense logic and GoodNet construction.
+model_evaluation.py: Script to assess model accuracy on untainted and compromised datasets.
+Dataset/: Folder containing valid.h5 for validation and test.h5 for testing.
+Saved_Models/: Storage for original, modified, and GoodNet models.
+## Installation and Operation Guide
 
-Setup and Execution
-1. Clone the repository to your local machine.
-2. Ensure you have a Jupyter Notebook environment set up on a MacBook Pro with an M1 chip or a similar configuration.
-3. Install necessary Python packages such as TensorFlow, Keras, etc., as listed in requirements.txt.
-4. Navigate to the Data/ directory and ensure it contains the correct datasets.
-5. Open Pruning_Defense.ipynb in Jupyter Notebook and execute the cells sequentially.
-6. Use eval.py to evaluate the models. Ensure the path to the data and model directories in the script reflects your local setup.
+Download the repository to your system.
+Set up a compatible Jupyter Notebook environment, ideally on a MacBook Pro with an M1 chip or an equivalent setup.
+Install all required dependencies listed in requirements.txt.
+Confirm the Dataset/ folder has the necessary data files.
+Launch Notebook_PruneDefense.ipynb in Jupyter Notebook and run the cells in order.
+For model evaluation, run model_evaluation.py, adjusting paths as needed for your environment.
+## Contributions
+Feedback and contributions are highly encouraged. For proposing changes or discussing new ideas, please initiate an issue or submit a pull request.
 
-Contributing
-Contributions to this project are welcome. Please open an issue to discuss your ideas or submit a pull request with your changes.
+## License
+This project is distributed under the MIT License. Refer to the LICENSE file for detailed terms and conditions.
 
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Acknowledgements
 
-Acknowledgments
-- Special thanks to the instructors and contributors of the CSAW-HackML-2020 for providing the dataset and initial guidance.
-- Gratitude to NYU for the support and resources provided during the course of this study.
+Appreciation goes to the team behind CSAW-HackML-2020 for their foundational work and dataset provision.
+Acknowledgement of NYU's support and resources in facilitating this research.
