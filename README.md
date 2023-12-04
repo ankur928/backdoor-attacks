@@ -33,6 +33,27 @@ Confirm the Dataset/ folder has the necessary data files.
 Launch Notebook_PruneDefense.ipynb in Jupyter Notebook and run the cells in order.
 For model evaluation, run model_evaluation.py, adjusting paths as needed for your environment.
 
+## Data
+1.  Download the validation and test datasets from  [here](https://drive.google.com/drive/folders/1Rs68uH8Xqa4j6UxG53wzD0uyI8347dSq?usp=sharing) and store them under  `lab4/data/`  directory.
+2.  The dataset contains images from the YouTube Aligned Face Dataset. We retrieved 1283 individuals and split them into validation and test datasets.
+3.  bd_valid.h5 and bd_test.h5 contains validation and test images with sunglasses trigger respectively, that activates the backdoor for bd_net.h5.
+
+## Directory Structure
+The project is organized as follows:
+
+- `data/`: Contains datasets for validation and testing.
+  - `cl/`: Clean datasets.
+    - `valid.h5`: Clean validation data for defense design.
+    - `test.h5`: Clean test data for BadNet evaluation.
+  - `bd/`: Datasets with sunglasses-poisoned images.
+    - `bd_valid.h5`: Validation data with backdoor trigger.
+    - `bd_test.h5`: Test data with backdoor trigger.
+- `models/`: Houses the neural network models.
+  - `bd_net.h5`: The backdoored neural network model.
+  - `bd_weights.h5`: Weight parameters for the model.
+- `architecture.py`: Defines the neural network architecture.
+- `eval.py`: Script for evaluating the model's performance.
+
 ## Contributions
 Feedback and contributions are highly encouraged. For proposing changes or discussing new ideas, please initiate an issue or submit a pull request.
 
