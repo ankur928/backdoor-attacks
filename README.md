@@ -77,6 +77,12 @@ All programming code and execution steps are detailed in `MLSec_Lab4_mpj8687.ipy
 For facial recognition, we utilized the DeepID network, a cutting-edge DNN architecture.
 
 To assess the integrity of the compromised model, run `eval.py`:
+python3 eval.py <clean validation data directory> <poisoned validation data directory> <model directory>
+
+For instance:
+python3 eval.py data/cl/valid.h5 data/bd/bd_valid.h5 models/bd_net.h5
+
+This command will output metrics like 'Clean Classification Accuracy: 98.64%' and 'Attack Success Rate: 100%'.
 
 ## Contributions
 Feedback and contributions are highly encouraged. For proposing changes or discussing new ideas, please initiate an issue or submit a pull request.
