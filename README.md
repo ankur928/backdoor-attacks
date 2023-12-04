@@ -9,8 +9,12 @@ Net ID: aa10336
 2. [System Requirements](#system-requirements)
 3. [Repository Structure](#repository-structure)
 4. [Installation and Operation Guide](#installation-and-operation-guide)
-5. [Contributions](#contributions)
-6. [Acknowledgements](#acknowledgements)
+5. [Data](#data)
+6. [Directory Structure](#directory-structure)
+7. [Procedure](#procedure)
+8. [Evaluating the Compromised Model](#evaluating-the-compromised-model)
+9. [Contributions](#contributions)
+10. [Acknowledgements](#acknowledgements)
 
 ## Overview
 This repository hosts the code for a novel neural network backdoor detection system. The project's goal is to enhance security in neural networks, particularly BadNets trained on the YouTube Face dataset, by developing an advanced model named GoodNet. GoodNet is engineered to differentiate between normal and compromised (backdoored) inputs, classifying them into separate categories.
@@ -53,6 +57,32 @@ The project is organized as follows:
   - `bd_weights.h5`: Weight parameters for the model.
 - `architecture.py`: Defines the neural network architecture.
 - `eval.py`: Script for evaluating the model's performance.
+
+## Procedure
+This project's main aim was to enhance a machine learning model using a series of methodologies such as channel pruning, saving models based on accuracy metrics, evaluating potential vulnerabilities, and synthesizing an optimized hybrid model.
+
+### Channel Pruning and Model Archiving
+Our technique included reducing the conv_3 layer, guided by the average activation values from the final pooling stage in the validation dataset. We adopted a model-saving approach at accuracy decline benchmarks of 2%, 4%, and 10%, resulting in models named model_X=2.h5, model_X=4.h5, and model_X=10.h5 to reflect the corresponding accuracy decrease.
+
+### Attack Vulnerability Analysis
+A significant part of this project was to determine the model's vulnerability to attacks, particularly assessing the rate of successful attacks when the accuracy decreased by 30%. This evaluation revealed a notable vulnerability rate at approximately 6.95%.
+
+### Constructing GoodNet
+Our objective was to merge two versions of the model: the original, potentially compromised model ("BadNet") and its improved version post-pruning. This endeavor aimed to establish an advanced, resilient model dubbed "GoodNet."
+
+### Implementation Overview
+All programming code and execution steps are detailed in `MLSec_Lab4_mpj8687.ipynb`. This comprehensive notebook covers every aspect, from model development and pruning to evaluation, vulnerability analysis, and the fusion of models to form GoodNet.
+
+## Evaluating the Compromised Model
+For facial recognition, we utilized the DeepID network, a cutting-edge DNN architecture.
+
+To assess the integrity of the compromised model, run `eval.py`:
+python3 eval.py <clean validation data directory> <poisoned validation data directory> <model directory>
+
+For instance:
+python3 eval.py data/cl/valid.h5 data/bd/bd_valid.h5 models/bd_net.h5
+
+This command will output metrics like 'Clean Classification Accuracy: 98.64%' and 'Attack Success Rate: 100%'.
 
 ## Contributions
 Feedback and contributions are highly encouraged. For proposing changes or discussing new ideas, please initiate an issue or submit a pull request.
