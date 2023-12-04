@@ -1,5 +1,18 @@
 # Neural Network Backdoor Detection Using Channel Pruning
 
+## Details
+Name: Ankur Aggarwal  
+Net ID: aa10336
+
+## Table of Contents
+1. [Overview](#overview)
+2. [System Requirements](#system-requirements)
+3. [Repository Structure](#repository-structure)
+4. [Installation and Operation Guide](#installation-and-operation-guide)
+5. [Contributions](#contributions)
+6. [License](#license)
+7. [Acknowledgements](#acknowledgements)
+
 ## Overview
 This repository hosts the code for a novel neural network backdoor detection system. The project's goal is to enhance security in neural networks, particularly BadNets trained on the YouTube Face dataset, by developing an advanced model named GoodNet. GoodNet is engineered to differentiate between normal and compromised (backdoored) inputs, classifying them into separate categories.
 
